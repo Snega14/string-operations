@@ -1,0 +1,47 @@
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String str="madam";
+        System.out.println("The string is "+str);
+        int count=0;
+        for(char i:str.toCharArray())
+        {
+            count++;
+        }
+        System.out.println("The String Length is "+count);
+        int lower=0;
+        for(int i=0;i<count;i++)
+        {
+            char ch=str.charAt(i);
+            if(ch>='a'&&ch<='z'||ch>='A'&&ch<='Z'||ch>='0'&&ch<='9')
+            {
+                lower++;
+            }
+            
+            System.out.print((char)(str.charAt(i)-32));
+        }
+        System.out.println();
+        if(lower==count)
+        {
+            System.out.println("Its a lower case string input");
+        }
+        else
+        {
+            System.out.println("Its not a lower case string input");   
+        }
+        String s="";
+        for(int i=count-1;i>=0;i--)
+        {
+            s=s+str.charAt(i);
+        }
+        System.out.println("The reverse of String is "+s);
+        if(str.contains(s))
+        {
+            System.out.println("Both the Strings are equal");
+        }
+        else
+        {
+             System.out.println("Both the Strings not are equal");
+        }
+    }
+}
